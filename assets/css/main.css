@@ -1,0 +1,197 @@
+@font-face {
+    font-family: 'Manrope';
+    src: url('../../libs/fonts/Manrope/Manrope-VariableFont_wght.ttf') format('truetype');
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	outline: 0;
+}
+
+:root {
+    --dark-white: #E5E5E5;
+    --black: #000000;
+    --light-grey: #747474;
+}
+
+html, body {
+    background-color: var(--dark-white);
+    overflow-y: hidden;
+}
+
+/* section {
+    margin-right: 100px;
+    margin-left: 100px;
+} */
+
+a,
+button,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label,
+li,
+p,
+span {
+	font-family: 'Manrope', sans-serif;
+}
+
+h1 {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
+}
+
+.tab-pane.active {
+    height: calc(100vh - 142px);
+    display: flex;
+    align-items: center;
+}
+
+/* ### NAVBAR ### */
+
+.navbar-logo {
+    width: 64px;
+}
+
+.navbar-toggler,
+.navbar-toggler:focus {
+    right: 0;
+    border: none;
+    outline: none;
+    text-shadow: none;
+    box-shadow: none;
+}
+
+.collapse.show {
+    position: fixed;
+    z-index: 999999;
+    background-color: var(--dark-white);
+    top: 72px;
+    width: 100%;
+}
+
+.navbarList {
+    height: calc(100vh - 166px);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    list-style-type: disc;
+    border: none;
+}
+
+.navbarList li,
+.nav-tabs .nav-link {
+    font-weight: 600;
+    font-size: 24px;
+    padding: 0;
+    margin: 0  auto;
+    border: none;
+}
+
+.navbarList li button {
+    text-decoration: none;
+    color: var(--black);
+}
+
+.navbarContact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbarContact ul {
+    list-style: none;
+}
+
+.navbarContact ul li {
+    display: inline-flex;
+    padding: 0 31px;
+}
+
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+    background-color: transparent;
+    border: none;
+}
+
+.nav-tabs .nav-link:focus,
+.nav-tabs .nav-link:hover {
+    border: none;
+}
+
+/* ### CONTACT ### */
+.contactTitle {
+    font-weight: 800;
+    font-size: 72px;
+    line-height: 99px;
+    font-style: normal;
+    text-align: center;
+    margin-bottom: 90px;
+    color: var(--black);
+}
+
+.contactEmail,
+.contactEmail a {
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 50px;
+    font-style: normal;
+    color: var(--black);
+    text-decoration: none;
+    text-align: center;
+}
+
+/* ### ABOUT ME ### */
+
+.aboutTitle {
+    font-weight: 800;
+    font-size: 48px;
+    font-style: normal;
+    line-height: 66px;
+    color: var(--black);
+}
+
+.aboutBox p {
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--light-grey);
+    font-style: normal;
+}
+
+@media(width: 414px){
+    html, body {
+        overflow-y: auto;
+    }
+    .navbarList {
+        flex-direction: column;
+        justify-content: start;
+    }
+    .navbarList li {
+        padding: 26px 0;
+    }
+    .tabAbout.active {
+        align-items: start;
+        height: 100%;
+    }
+    .aboutTitle {
+        font-size: 18px;
+        line-height: 25px;
+        text-align: center;
+        margin-top: 23px;
+        margin-bottom: 44px;
+    }
+    .contactTitle {
+        font-size: 24px;
+        line-height: 33px;
+    }
+    .contactEmail,
+    .contactEmail a {
+        font-size: 18px;
+        line-height: 25px;
+    }
+}
