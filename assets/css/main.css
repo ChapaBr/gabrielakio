@@ -163,7 +163,7 @@ h1 {
     font-style: normal;
 }
 
-@media(width: 414px){
+@media(max-width: 414px){
     html, body {
         overflow-y: auto;
     }
