@@ -42,8 +42,6 @@
         <!-- <link rel="canonical" href="#"/> -->
 
         <link href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <link href="libs/owlcarousel/owl.carousel.min.css" rel="stylesheet">
-        <link href="libs/owlcarousel/owl.theme.default.min.css" rel="stylesheet">
         <link href="assets/css/main.css?v=2" rel="stylesheet">
     </head>
     <body>
@@ -51,49 +49,38 @@
 
         <nav class="navbar">
           <div class="container-fluid">
-            <div class="navbarBox">
-              <img class="navbar-logo" src="assets/img/logo.svg">
-              <label class="burger burger1 btnHamburguer d-flex" for="burger1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                <input class="hidden" id="burger1" type="checkbox"/><span></span>
-              </label>
-              <!-- <button class="d-flex btnHamburguer" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                <img src="assets/img/hamburguer.svg">
-              </button> -->
-            </div>
+            <a class="navbar-brand" href="index.html">
+              <img src="assets/img/arrowLeft.svg">
+            </a>
           </div>
         </nav>
 
-        <div class="collapse collapseBox" id="navbarToggleExternalContent">
-          <div class="navbox">
-            <ul>
-              <li><a href="index.html">Branding Projects</a></li>
-              <li><a href="projects.html">UX/UI Projects</a></li>
-              <li><a href="contact.html">Contact</a></li>
-              <li><a href="about.html">About me</a></li>
+        <div class="collapse" id="navbarToggleExternalContent">
+          <div class="p-4">
+            <ul class="nav nav-tabs navbarList" id="myTab" role="tablist">
+              <li><button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Branding Projects</button></li>
+              <li><button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">UX/UI Projects</button></li>
+              <li><button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Contact</button></li>
+              <li><button class="nav-link" id="about-tab" data-bs-toggle="tab" data-bs-target="#about" type="button" role="tab" aria-controls="about" aria-selected="false">About me</button></li>
             </ul>
-          </div>
-          <div class="footerBox">
-            <ul>
-              <li><a href="https://www.behance.net/gabrielakio" target="_blank"><img src="assets/img/behance.svg"></a></li>
-              <li><a href="https://www.linkedin.com/in/gabrielakio/" target="_blank"><img src="assets/img/linkedin.svg"></a></li>
-              <li><a href="https://www.instagram.com/gabriel.akioo/" target="_blank"><img src="assets/img/instagram.svg"></a></li>
-            </ul>
+            <div class="navbarContact">
+              <ul>
+                <li><a href="https://www.behance.net/gabrielakio" target="_blank"><img src="assets/img/behance.svg"></a></li>
+                <li><a href="https://www.linkedin.com/in/gabrielakio/" target="_blank"><img src="assets/img/linkedin.svg"></a></li>
+                <li><a href="https://www.instagram.com/gabriel.akioo/" target="_blank"><img src="assets/img/instagram.svg"></a></li>
+              </ul>
+            </div>
           </div>
         </div>
 
         <section>
           <div class="container">
-              <div class="row contentBox">
-                <div class="col-12 col-lg-4">
-                  <img class="w-100" src="assets/img/ipic.svg">
-                </div>
-                <div class="col-12 col-lg-8 aboutBox">
-                  <h2 class="aboutTitle">I'm a Digital Designer with a focus on branding and product desing</h2>
-                  <p>My name is Gabriel Akio i have 22 years old, i born and living in São Paulo and i studying design since 2018 at University Anhembi Morumbi, i currently work as a intern at Adtail Newblue.</p>
-                  <p>For me the goal of design is convey something or create solutions, and this is what i try to put in every porject i work on.</p>
-                  <p>Nice to meet you =)</p>
-                </div>
+            <div class="row contentBox">
+              <div class="col-12">
+                <h2 class="contactTitle">Let's work together and do something awesomeee?</h2>
+                <h3 class="contactEmail"><a href="mailto:gabrielakio99@gmail.com">gabrielakio99@gmail.com</a></h3>
               </div>
+            </div>
           </div>
           <footer>
             <div class="footerBox">
@@ -112,9 +99,7 @@
         <img src="assets/img/arrowRight.svg">
         <img src="assets/img/arrowLeft.svg"> -->
 
-        <script src="assets/js/jquery.min.js"></script>
         <script src="libs/bootstrap/js/bootstrap.min.js"></script>
-        <script src="libs/owlcarousel/owl.carousel.min.js"></script>
-        <script src="assets/js/mainProjects.js"></script>
+        <script src="assets/js/main.js"></script>
     </body>
 </html>

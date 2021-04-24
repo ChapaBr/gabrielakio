@@ -1,3 +1,4 @@
+/* ### START GLOBAL ### */
 @font-face {
     font-family: 'Manrope';
     src: url('../../libs/fonts/Manrope/Manrope-VariableFont_wght.ttf') format('truetype');
@@ -45,86 +46,73 @@ h1 {
     font-weight: 800;
 }
 
-.tab-pane.active {
-    height: calc(100vh - 142px);
-    display: flex;
+.contentBox {
+    height: calc(100vh - 132px);
     align-items: center;
 }
+/* ### END GLOBAL ### */
 
-/* ### NAVBAR ### */
-
-.navbar-logo {
-    width: 64px;
-}
-
-.navbar-toggler,
-.navbar-toggler:focus {
-    right: 0;
-    border: none;
-    outline: none;
-    text-shadow: none;
-    box-shadow: none;
-}
-
-.collapse.show {
-    position: fixed;
-    z-index: 999999;
+/* ### START NAVBAR ### */
+.navbar {
     background-color: var(--dark-white);
-    top: 72px;
-    width: 100%;
+    height: 72px;
 }
-
-.navbarList {
-    height: calc(100vh - 166px);
+.navbarBox {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.btnHamburguer,
+.btnHamburguer:focus {
+    text-decoration: none;
+    border: none;
+    box-shadow: none;
+    display: contents;
+    right: 12px;
+    position: absolute;
+}
+.navbox ul {
+    height: calc(100vh - 132px);
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
     list-style-type: disc;
     border: none;
+    padding: 0;
+    margin: 0;
 }
-
-.navbarList li,
-.nav-tabs .nav-link {
+.navbox li {
     font-weight: 600;
     font-size: 24px;
-    padding: 0;
-    margin: 0  auto;
+    padding: 26px 0;
+    margin: 0 auto;
     border: none;
 }
-
-.navbarList li button {
+.navbox a {
     text-decoration: none;
-    color: var(--black);
+    color: var(--preto);
+    font-weight: 600;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 33px;
 }
+/* ### END NAVBAR ### */
 
-.navbarContact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+/* ### START BRANDING PROJECTS ### */
+.collapseBox {
+
 }
+/* ### END BRANDING PROJECTS ### */
 
-.navbarContact ul {
-    list-style: none;
-}
 
-.navbarContact ul li {
-    display: inline-flex;
-    padding: 0 31px;
-}
+/* ### START UX/UI PROJECTS ### */
 
-.nav-tabs .nav-item.show .nav-link,
-.nav-tabs .nav-link.active {
-    background-color: transparent;
-    border: none;
-}
+/* ### END UX/UI PROJECTS ### */
 
-.nav-tabs .nav-link:focus,
-.nav-tabs .nav-link:hover {
-    border: none;
-}
 
-/* ### CONTACT ### */
+/* ### START CONTACT ### */
 .contactTitle {
     font-weight: 800;
     font-size: 72px;
@@ -145,9 +133,10 @@ h1 {
     text-decoration: none;
     text-align: center;
 }
+/* ### END CONTACT ### */
 
-/* ### ABOUT ME ### */
 
+/* ### START ABOUT ### */
 .aboutTitle {
     font-weight: 800;
     font-size: 48px;
@@ -162,22 +151,59 @@ h1 {
     color: var(--light-grey);
     font-style: normal;
 }
+/* ### END ABOUT ### */
 
+
+/* ### START FOOTER ### */
+.footerBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footerBox ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footerBox ul li {
+    display: inline-flex;
+    padding: 0 31px;
+}
+/* ### END FOOTER ### */
+
+
+
+/* ### START MEDIA QUERIE ### */
 @media(max-width: 414px){
+    /* START GLOBAL */
     html, body {
         overflow-y: auto;
     }
-    .navbarList {
-        flex-direction: column;
-        justify-content: start;
+    .navbar-logo {
+        width: 51px;
     }
-    .navbarList li {
-        padding: 26px 0;
-    }
-    .tabAbout.active {
-        align-items: start;
+    .contentBox {
         height: 100%;
     }
+    .navbarBox {
+        justify-content: normal;
+    }
+    .navbox ul {
+        flex-direction: column;
+    }
+    .collapseBox {
+        position: fixed;
+        background-color: var(--dark-white);
+        width: 100%;
+    }
+    .collapseBox.show html, body {
+        overflow-y: hidden;
+    }
+    /* END GLOBAL */
+
+
+    /* START ABOUT */
     .aboutTitle {
         font-size: 18px;
         line-height: 25px;
@@ -185,6 +211,10 @@ h1 {
         margin-top: 23px;
         margin-bottom: 44px;
     }
+    /* END ABOUT */
+
+
+    /* START CONTACT */
     .contactTitle {
         font-size: 24px;
         line-height: 33px;
@@ -194,4 +224,136 @@ h1 {
         font-size: 18px;
         line-height: 25px;
     }
+    /* START CONTACT */
+}
+/* ### END MEDIA QUERIE ### */
+
+
+
+/* Default use:
+  @include min-(width,4,240);
+
+  use width calculation
+  @include min-(width,4,240,'calc(100% - 240px)');
+*/
+  
+.hidden {
+    visibility: hidden;
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+
+.burger {
+    display: block;
+    position: absolute;
+    width: 3em;
+    height: 3em;
+    margin: 0.5rem;
+    background-color: transparent;
+}
+.burger span {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    position: absolute;
+    margin: 0.0625rem auto 0.525rem -0.75rem;
+    text-indent: -999em;
+    top: 50%;
+    left: 50%;
+    margin-top: -0.0625rem;
+    cursor: pointer;
+}
+.burger span,
+.burger span:before,
+.burger span:after {
+    display: block;
+    width: 36px;
+    height: 5px;
+    transition: 0.3s;
+    opacity: 1;
+}
+.burger span:before,
+.burger span:after {
+    position: absolute;
+    content: "";
+    background-color: var(--black);
+}
+.burger span:before {
+    top: -0.525rem;
+}
+.burger span:after {
+    top: 0.525rem;
+}
+
+.burgers {
+    display: flex;
+}
+
+.burger1 input:checked + span:before,
+.burger1 input:checked + span:after {
+    top: 0px;
+    margin-top: -0.5875rem;
+}
+.burger1 input:checked + span {
+    background-color: transparent;
+}
+.burger1 input:checked + span:before {
+    transform: translateY(0.525rem) rotate(45deg);
+}
+.burger1 input:checked + span:after {
+    transform: translateY(0.525rem) rotate(-45deg);
+}
+
+@-webkit-keyframes menuCloseMiddle--after {
+    0% {
+        transform: translateY(0) rotate(0);
+    }
+    80% {
+        transform: translateY(0.525rem) rotate(0);
+    }
+    100% {
+        transform: translateY(0.525rem) rotate(45deg);
+    }
+}
+@keyframes menuCloseMiddle--after {
+    0% {
+        transform: translateY(0) rotate(0);
+    }
+    80% {
+        transform: translateY(0.525rem) rotate(0);
+    }
+    100% {
+        transform: translateY(0.525rem) rotate(45deg);
+    }
+}
+@-webkit-keyframes menuCloseMiddle--before {
+    0% {
+        transform: translateY(0) rotate(0);
+    }
+    80% {
+        transform: translateY(0.525rem) rotate(0);
+    }
+    100% {
+        transform: translateY(0.525rem) rotate(-45deg);
+    }
+}
+@keyframes menuCloseMiddle--before {
+    0% {
+        transform: translateY(0) rotate(0);
+    }
+    80% {
+        transform: translateY(0.525rem) rotate(0);
+    }
+    100% {
+        transform: translateY(0.525rem) rotate(-45deg);
+    }
+}
+  
+  
+.description {
+width: 100%;
+text-align: center;
+color: rgba(0, 0, 0, 0.25);
 }
