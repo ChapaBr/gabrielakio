@@ -78,7 +78,7 @@ h1 {
     position: absolute;
 }
 .navbox ul {
-    height: calc(100vh - 130px);
+    height: calc(100vh - 123px);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -195,6 +195,10 @@ h1 {
 .footerBox ul li {
     display: inline-flex;
     padding: 0 31px;
+}
+
+.footerBox img {
+    width: 25px;
 }
 /* ### END FOOTER ### */
 
