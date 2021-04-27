@@ -16,12 +16,16 @@
     --light-grey: #747474;
 }
 
-html, body {
+body {
     background-color: var(--dark-white);
     overflow-y: hidden;
 }
 
-/* section {
+#projects {
+    overflow-y: auto;
+}
+
+/* .container {
     margin-right: 100px;
     margin-left: 100px;
 } */
@@ -47,7 +51,7 @@ h1 {
 }
 
 .contentBox {
-    height: calc(100vh - 132px);
+    height: calc(100vh - 130px);
     align-items: center;
 }
 /* ### END GLOBAL ### */
@@ -62,9 +66,10 @@ h1 {
     width: 100%;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
-.btnHamburguer,
-.btnHamburguer:focus {
+.btnBurger,
+.btnBurger:focus {
     text-decoration: none;
     border: none;
     box-shadow: none;
@@ -73,7 +78,7 @@ h1 {
     position: absolute;
 }
 .navbox ul {
-    height: calc(100vh - 132px);
+    height: calc(100vh - 130px);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -101,7 +106,29 @@ h1 {
 
 
 /* ### START BRANDING PROJECTS ### */
-
+.carouselBox {
+    height: calc(100vh - 200px);
+    /* border: 2px solid #000; */
+}
+.carouselBox img {
+    height: calc(100vh - 200px);
+}
+#customNav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+#customNav button {
+    border: none;
+    box-shadow: none;
+    outline: none;
+    text-decoration: none;
+    background-color: transparent;
+}
+#customNav button img {
+    width: 48px;
+    height: 48px;
+}
 /* ### END BRANDING PROJECTS ### */
 
 
@@ -162,6 +189,7 @@ h1 {
 .footerBox ul {
     list-style: none;
     padding: 0;
+    margin-bottom: 25px;
 }
 
 .footerBox ul li {
@@ -173,6 +201,11 @@ h1 {
 
 
 /* ### START MEDIA QUERIE ### */
+@media(min-width: 1023px){
+    /* .container {
+        margin: 0 100px;
+    } */
+}
 @media(max-width: 414px){
     /* START GLOBAL */
     html, body {
@@ -180,9 +213,6 @@ h1 {
     }
     .navbar-logo {
         width: 51px;
-    }
-    .contentBox {
-        height: 100%;
     }
     .navbarBox {
         justify-content: normal;
@@ -194,9 +224,16 @@ h1 {
         position: fixed;
         background-color: var(--dark-white);
         width: 100%;
+        z-index: 9;
     }
     .collapseBox.show html, body {
         overflow-y: hidden;
+    }
+    .contentBox {
+        height: 100%;
+    }
+    .contactBox {
+        height: calc(100vh - 140px);
     }
     /* END GLOBAL */
 
@@ -216,6 +253,7 @@ h1 {
     .contactTitle {
         font-size: 24px;
         line-height: 33px;
+        margin-bottom: 18px;
     }
     .contactEmail,
     .contactEmail a {
@@ -249,6 +287,7 @@ h1 {
     height: 3em;
     margin: 0.5rem;
     background-color: transparent;
+    right: 0;
 }
 .burger span {
     -webkit-user-select: none;
@@ -289,18 +328,18 @@ h1 {
     display: flex;
 }
 
-.burger1 input:checked + span:before,
-.burger1 input:checked + span:after {
+.burger input:checked + span:before,
+.burger input:checked + span:after {
     top: 0px;
     margin-top: -0.5875rem;
 }
-.burger1 input:checked + span {
+.burger input:checked + span {
     background-color: transparent;
 }
-.burger1 input:checked + span:before {
+.burger input:checked + span:before {
     transform: translateY(0.525rem) rotate(45deg);
 }
-.burger1 input:checked + span:after {
+.burger input:checked + span:after {
     transform: translateY(0.525rem) rotate(-45deg);
 }
 
@@ -348,10 +387,15 @@ h1 {
         transform: translateY(0.525rem) rotate(-45deg);
     }
 }
-  
-  
-.description {
-width: 100%;
-text-align: center;
-color: rgba(0, 0, 0, 0.25);
+
+
+.header-carousel.owl-carousel.owl-theme.owl-loaded.owl-drag,
+.header-carousel .owl-stage-outer,
+.header-carousel .owl-stage,
+.header-carousel .owl-item,
+.header-carousel .item,
+.header-carousel .owl-item,
+.header-carousel .img-responsive{
+    height: calc(100vh - 130px);
+    object-fit: cover;
 }
