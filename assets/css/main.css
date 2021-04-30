@@ -51,7 +51,7 @@ h1 {
 }
 
 .contentBox {
-    height: calc(100vh - 130px);
+    height: calc(100vh - 190px);
     align-items: center;
 }
 /* ### END GLOBAL ### */
@@ -60,6 +60,7 @@ h1 {
 .navbar {
     background-color: var(--dark-white);
     height: 72px;
+    margin-bottom: 60px;
 }
 .navbarBox {
     display: flex;
@@ -78,7 +79,7 @@ h1 {
     position: absolute;
 }
 .navbox ul {
-    height: calc(100vh - 123px);
+    height: calc(100vh - 183px);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -107,11 +108,11 @@ h1 {
 
 /* ### START BRANDING PROJECTS ### */
 .carouselBox {
-    height: calc(100vh - 200px);
+    height: calc(100vh - 300px);
     /* border: 2px solid #000; */
 }
 .carouselBox img {
-    height: calc(100vh - 200px);
+    height: calc(100vh - 300px);
 }
 #customNav {
     display: flex;
@@ -129,9 +130,51 @@ h1 {
     width: 48px;
     height: 48px;
 }
+.titleProjects h1 {
+    font-size: 28px;
+    font-weight: 800;
+    font-style: normal;
+    color: var(--black);
+    margin-bottom: 5px;
+}
+.titleProjects span {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--light-grey);
+}
 .imgProject {
     width: 100%;
     height: 75vh;
+}
+
+.leftContentContainer span,
+.rightContentContainer span {
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--black);    
+}
+
+.leftContentContainer {
+    position: absolute;
+    top: 45%;
+    left: 0;
+    transform: rotate(-90deg);
+    display: flex;
+    margin-left: -30px;
+}
+
+.rightContentContainer {
+    position: absolute;
+    top: 45%;
+    right: 0;
+    transform: rotate(90deg);
+    display: flex;
+    margin-right: 18px;
+}
+
+#testeId {
+    position: relative;
 }
 /* ### END BRANDING PROJECTS ### */
 
@@ -219,6 +262,9 @@ h1 {
     html, body {
         overflow-y: auto;
     }
+    #customNav {
+        margin-top: 20px;
+    }
     .navbar-logo {
         width: 51px;
     }
@@ -241,10 +287,20 @@ h1 {
         height: 100%;
     }
     .contactBox {
-        height: calc(100vh - 140px);
+        height: calc(100vh - 200px);
     }
     /* END GLOBAL */
 
+    /* START PROJECT */
+    .leftContentContainer,
+    .rightContentContainer {
+        position: relative;
+        transform: rotate(0deg);
+        top: 0;
+        justify-content: center;
+        margin: 0;
+    }
+    /* END PROJECT */
 
     /* START ABOUT */
     .aboutTitle {
@@ -404,6 +460,25 @@ h1 {
 .header-carousel .item,
 .header-carousel .owl-item,
 .header-carousel .img-responsive{
-    height: calc(100vh - 130px);
+    height: calc(100vh - 190px);
     object-fit: cover;
+}
+
+ /* muda bootstrap */
+
+ @media (min-width: 1900px){
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm, 
+    .container-xl,
+    .container-xxl {
+        max-width: 1720px;
+    }
+    .leftContentContainer {
+        margin-left: -5px;
+    }
+    .rightContentContainer {
+        margin-right: 38px;
+    }
 }
