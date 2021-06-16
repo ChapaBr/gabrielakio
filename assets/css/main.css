@@ -11,7 +11,8 @@
 }
 
 :root {
-    --dark-white: #E5E5E5;
+    /* --dark-white: #E5E5E5; */
+    --dark-white: #F9F5F5;
     --black: #000000;
     --light-grey: #747474;
 }
@@ -51,25 +52,27 @@ h1 {
 }
 
 .contentBox {
-    height: calc(100vh - 190px);
-    align-items: center;
+    height: calc(100vh - 167px); /* 190px */
+    /* align-items: center; */
 }
 /* ### END GLOBAL ### */
 
 /* ### START NAVBAR ### */
-.navbar {
+/* .navbar {
     background-color: var(--dark-white);
-    height: 72px;
-    margin-bottom: 60px;
-}
-.navbarBox {
+    height: 56px;
+    margin-bottom: 43px;
+    margin-top: 43px;
+    padding: 0;
+    position: relative;
+} */
+/* .navbarBox {
     display: flex;
     width: 100%;
-    justify-content: center;
     align-items: center;
     position: relative;
-}
-.btnBurger,
+} */
+/* .btnBurger,
 .btnBurger:focus {
     text-decoration: none;
     border: none;
@@ -77,7 +80,7 @@ h1 {
     display: contents;
     right: 12px;
     position: absolute;
-}
+} */
 .navbox ul {
     height: calc(100vh - 183px);
     display: flex;
@@ -108,11 +111,11 @@ h1 {
 
 /* ### START BRANDING PROJECTS ### */
 .carouselBox {
-    height: calc(100vh - 300px);
+    height: calc(100vh - 190px);
     /* border: 2px solid #000; */
 }
 .carouselBox img {
-    height: calc(100vh - 300px);
+    height: calc(100vh - 190px); /* 270px */
 }
 #customNav {
     display: flex;
@@ -215,6 +218,8 @@ h1 {
     font-style: normal;
     line-height: 66px;
     color: var(--black);
+    margin-top: 42px;
+    margin-bottom: 51px;
 }
 
 .aboutBox p {
@@ -222,6 +227,7 @@ h1 {
     font-weight: 400;
     color: var(--light-grey);
     font-style: normal;
+    margin: 0;
 }
 /* ### END ABOUT ### */
 
@@ -236,7 +242,7 @@ h1 {
 .footerBox ul {
     list-style: none;
     padding: 0;
-    margin-bottom: 25px;
+    margin-bottom: 27px;
 }
 
 .footerBox ul li {
@@ -261,15 +267,13 @@ h1 {
     /* START GLOBAL */
     html, body {
         overflow-y: auto;
+        scroll-behavior: smooth;
     }
     #customNav {
         margin-top: 20px;
     }
     .navbar-logo {
         width: 51px;
-    }
-    .navbarBox {
-        justify-content: normal;
     }
     .navbox ul {
         flex-direction: column;
@@ -347,9 +351,8 @@ h1 {
 .burger {
     display: block;
     position: absolute;
-    width: 3em;
-    height: 3em;
-    margin: 0.5rem;
+    width: 48px;
+    height: 48px;
     background-color: transparent;
     right: 0;
 }
@@ -370,7 +373,7 @@ h1 {
 .burger span:before,
 .burger span:after {
     display: block;
-    width: 36px;
+    width: 48px;
     height: 5px;
     transition: 0.3s;
     opacity: 1;

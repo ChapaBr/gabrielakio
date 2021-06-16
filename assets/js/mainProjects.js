@@ -12,18 +12,20 @@ btnHamburguer.addEventListener('click', function(){
 });
 
 $('.owl-carousel').owlCarousel({
-    loop:false,
+    autoplay:true,
+    autoplayTimeout:5000,
+    autoplayHoverPause:false,
+    loop:true,
     margin:10,
     responsiveClass:true,
     autoHeightClass: 'owl-height',
     dots: false,
     navText: ["<img src='assets/img/arrowLeft.svg'>","<img src='assets/img/arrowRight.svg'>"],
     center: true,
-    navContainer : '#customNav' , 
     responsive:{
         0:{
             items:1,
-            nav:true
+            nav:false
         }
     }
 })
