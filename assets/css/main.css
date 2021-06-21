@@ -4,6 +4,11 @@
     src: url('../../libs/fonts/Manrope/Manrope-VariableFont_wght.ttf') format('truetype');
 }
 
+html,
+body {
+    height: 100%;
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -51,13 +56,16 @@ h1 {
     font-weight: 800;
 }
 
-.contentBox {
+/* .contentBox {
     height: calc(100vh - 167px); /* 190px */
     /* align-items: center; */
-}
+} */
 /* ### END GLOBAL ### */
 
 /* ### START NAVBAR ### */
+.navbar {
+    background-color: var(--dark-white);
+}
 /* .navbar {
     background-color: var(--dark-white);
     height: 56px;
@@ -188,6 +196,13 @@ h1 {
 
 
 /* ### START CONTACT ### */
+#secContact {
+    height: calc(100vh - 170px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .contactTitle {
     font-weight: 800;
     font-size: 72px;
@@ -200,7 +215,7 @@ h1 {
 
 .contactEmail,
 .contactEmail a {
-    font-weight: 800;
+    font-weight: 400;
     font-size: 36px;
     line-height: 50px;
     font-style: normal;
@@ -233,6 +248,18 @@ h1 {
 
 
 /* ### START FOOTER ### */
+footer {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+}
+
+footer#footerProjetos {
+    position: relative;
+    bottom: 0;
+    margin: 15px 0;
+}
+
 .footerBox {
     display: flex;
     flex-direction: column;
@@ -242,8 +269,12 @@ h1 {
 .footerBox ul {
     list-style: none;
     padding: 0;
-    margin-bottom: 27px;
+    margin-bottom: 0;
 }
+
+/* .footerIndex .footerBox ul {
+    margin-top: 30px;
+} */
 
 .footerBox ul li {
     display: inline-flex;
