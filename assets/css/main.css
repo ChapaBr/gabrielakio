@@ -94,7 +94,7 @@ h1 {
 .navbox ul {
     height: calc(100vh - 133px); /* era 183px */
     display: flex;
-    flex-direction: row;
+    flex-direction: column; /* era row */
     align-items: center;
     list-style-type: disc;
     border: none;
@@ -296,6 +296,9 @@ footer#footerProjetos {
     /* .container {
         margin: 0 100px;
     } */
+    .navbox ul {
+        height: 100%;
+    }
 }
 @media(max-width: 414px){
     /* START GLOBAL */
