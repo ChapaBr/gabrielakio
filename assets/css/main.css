@@ -57,9 +57,11 @@ h1 {
 }
 
 /* .contentBox {
-    height: calc(100vh - 167px); /* 190px */
-    /* align-items: center; */
+    height: calc(100vh - 167px);
+    align-items: center;
 } */
+
+
 /* ### END GLOBAL ### */
 
 /* ### START NAVBAR ### */
@@ -90,14 +92,15 @@ h1 {
     position: absolute;
 } */
 .navbox ul {
-    height: calc(100vh - 183px);
+    height: calc(100vh - 133px); /* era 183px */
     display: flex;
-    flex-direction: row;
+    flex-direction: column; /* era row */
     align-items: center;
     list-style-type: disc;
     border: none;
     padding: 0;
     margin: 0;
+    justify-content: center;
 }
 .navbox li {
     font-weight: 600;
@@ -119,11 +122,11 @@ h1 {
 
 /* ### START BRANDING PROJECTS ### */
 .carouselBox {
-    height: calc(100vh - 190px);
+    height: calc(100vh - 230px); /* era 190px */
     /* border: 2px solid #000; */
 }
 .carouselBox img {
-    height: calc(100vh - 190px); /* 270px */
+    height: calc(100vh - 230px); /* 270px */ /* era 190px */
 }
 #customNav {
     display: flex;
@@ -298,6 +301,9 @@ footer#footerProjetos {
     /* .container {
         margin: 0 100px;
     } */
+    .navbox ul {
+        height: 100%;
+    }
 }
 @media(max-width: 414px){
     /* START GLOBAL */
@@ -305,11 +311,12 @@ footer#footerProjetos {
         overflow-y: auto;
         scroll-behavior: smooth;
     }
-    #customNav {
-        margin-top: 20px;
+    #navbarNav {
+        max-height: calc(100vh - 78px);
+        height: -webkit-fill-available;
     }
     .navbar-logo {
-        width: 51px;
+        width: 50px;
     }
     .navbox ul {
         flex-direction: column;
@@ -325,6 +332,8 @@ footer#footerProjetos {
     }
     .contentBox {
         height: 100%;
+        width: 100%;
+        margin: 0;
     }
     .contactBox {
         height: calc(100vh - 200px);
@@ -386,11 +395,12 @@ footer#footerProjetos {
 
 .burger {
     display: block;
-    position: absolute;
+    position: relative;
     width: 48px;
     height: 48px;
     background-color: transparent;
     right: 0;
+    cursor: pointer;
 }
 .burger span {
     -webkit-user-select: none;
@@ -398,10 +408,10 @@ footer#footerProjetos {
     -ms-user-select: none;
     user-select: none;
     position: absolute;
-    margin: 0.0625rem auto 0.525rem -0.75rem;
+    margin: 0.0625rem 0 0.525rem 0; /* era 0.0625rem auto 0.525rem -0.75rem */
     text-indent: -999em;
     top: 50%;
-    left: 50%;
+    left: 0; /* era 50% */
     margin-top: -0.0625rem;
     cursor: pointer;
 }
