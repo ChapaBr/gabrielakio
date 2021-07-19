@@ -349,6 +349,9 @@ footer#footerProjetos {
         justify-content: center;
         margin: 0;
     }
+    .subTitleProject {
+        font-size: 24px;
+    }
     /* END PROJECT */
 
     /* START ABOUT */
