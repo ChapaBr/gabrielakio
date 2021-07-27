@@ -1,6 +1,20 @@
 const btnHamburguer = document.getElementById('burger');
 const collapseBox = document.querySelector('.collapseBox');
-btnHamburguer.addEventListener('click', function(){
+
+let btnMenu = document.querySelector('.btnMenu');
+let navBar = document.querySelector('.nav-bar');
+let navIcon = document.querySelector('#nav-icon');
+btnMenu.addEventListener("click", function(event){
+    if(navBar.classList.contains('activedMenu')){
+        navBar.classList.remove("activedMenu");
+        navIcon.classList.remove("open");
+    } else {
+        navBar.classList.add("activedMenu");
+        navIcon.classList.add("open");
+    }
+}, false);
+
+/* btnHamburguer.addEventListener('click', function(){
     if(collapseBox.classList.contains('showCollapse') && screen.width < 769){
         document.documentElement.style.overflowY = 'auto';
         collapseBox.classList.remove('showCollapse');
@@ -9,7 +23,7 @@ btnHamburguer.addEventListener('click', function(){
         collapseBox.classList.add('showCollapse');
         window.scrollTo(0, 0);
     }
-});
+}); */
 
 $('.owl-carousel').owlCarousel({
     autoplay:true,
