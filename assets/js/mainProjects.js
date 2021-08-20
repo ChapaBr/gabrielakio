@@ -14,17 +14,6 @@ btnMenu.addEventListener("click", function(event){
     }
 }, false);
 
-/* btnHamburguer.addEventListener('click', function(){
-    if(collapseBox.classList.contains('showCollapse') && screen.width < 769){
-        document.documentElement.style.overflowY = 'auto';
-        collapseBox.classList.remove('showCollapse');
-    } else {
-        document.documentElement.style.overflowY = 'hidden';
-        collapseBox.classList.add('showCollapse');
-        window.scrollTo(0, 0);
-    }
-}); */
-
 $('.owl-carousel').owlCarousel({
     autoplay:true,
     autoplayTimeout:5000,

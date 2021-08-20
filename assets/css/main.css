@@ -249,14 +249,15 @@ nav ul.listMenu a.active {
 
 /* ### END NAVBAR ### */
 
+.contentBox {
+    height: calc(100vh - 151px);
+}
 
 /* ### START BRANDING PROJECTS ### */
-.carouselBox {
+.carouselBox,
+.carouselBox img {
     height: calc(100vh - 151px); /* era 190px */
     /* border: 2px solid #000; */
-}
-.carouselBox img {
-    height: calc(100vh - 151px); /* 270px */ /* era 190px */ 
 }
 .titleProjects h1 {
     font-size: 28px;
@@ -423,7 +424,7 @@ footer#footerProjetos {
 @media(max-width: 414px){
     /* START GLOBAL */
     html, body {
-        overflow-y: auto;
+        /* overflow-y: auto; */
         scroll-behavior: smooth;
     }
     #navbarNav {
@@ -442,9 +443,9 @@ footer#footerProjetos {
         width: 100%;
         z-index: 9;
     }
-    .collapseBox.show html, body {
+    /* .collapseBox.show html, body {
         overflow-y: hidden;
-    }
+    } */
     .contentBox {
         height: 100%;
         width: 100%;
@@ -579,6 +580,9 @@ footer#footerProjetos {
 }
 
 @media only screen and (max-width: 767px) {
+    body.alterOverflow {
+        overflow-y: auto;
+    }
     nav {
         height: 48px;
         z-index: 9999;
@@ -643,7 +647,8 @@ footer#footerProjetos {
         max-width: 664px;
         margin: 0 auto;
         padding: 0px 40px 8px;
-        height: auto;
+        height: calc(100% - 137px);
+        padding-bottom: 0;
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
         overflow-y: auto;
