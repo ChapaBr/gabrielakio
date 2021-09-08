@@ -69,7 +69,7 @@
 
     <title>Gabriel Akio - Novo Projeto</title>
 
-    <nav class="nav-bar navbar-light fixed-top m-0 bg-transparent">
+    <nav class="nav-bar navbar-light fixed-top m-0">
         <div class="container p-md-0">
             <ul class="listMenuMobile">
                 <li><a href="index.php"><img class="logoMenu" src="assets/img/logo.svg" alt="Logo da InnerWay"></a></li>
@@ -87,7 +87,7 @@
                 <li>
                 <div class="listItems d-flex flex-column flex-md-row">
                     <a class="nav-link btnNavItem active" aria-current="page" href="home.php">Projetos</a>
-                    <a class="nav-link btnNavItem active" aria-current="page" href="atualizarProjeto.php">Atualizar Projeto</a>
+                    <a class="nav-link btnNavItem active" aria-current="page" href="#">Atualizar Projeto</a>
                     <a class="nav-link btnNavItem active" aria-current="page" href="Controllers/LogoutController.php">Sair</a>
                 </div>
                 </li>

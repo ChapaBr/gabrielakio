@@ -67,7 +67,7 @@
             include('Model/Projetos.php');
         ?>
 
-    <title>Gabriel Akio - Novo Projeto</title>
+    <title>Gabriel Akio - Atualiza Projeto</title>
 
     <nav class="nav-bar navbar-light fixed-top m-0 bg-transparent">
         <div class="container p-md-0">
@@ -87,7 +87,7 @@
                 <li>
                 <div class="listItems d-flex flex-column flex-md-row">
                     <a class="nav-link btnNavItem active" aria-current="page" href="home.php">Projetos</a>
-                    <a class="nav-link btnNavItem active" aria-current="page" href="atualizarProjeto.php">Atualizar Projeto</a>
+                    <a class="nav-link btnNavItem active" aria-current="page" href="novoProjeto.php">Novo Projeto</a>
                     <a class="nav-link btnNavItem active" aria-current="page" href="Controllers/LogoutController.php">Sair</a>
                 </div>
                 </li>

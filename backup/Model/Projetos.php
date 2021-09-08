@@ -3,27 +3,18 @@
 
     class projetos extends Conn {
 
-        private $idProjeto;
-        private $nomeProjeto;
+        private $nomeUser;
         private $prioridade;
         private $linkProjeto;
         private $imgDesktop;
         private $imgMobile;
 
-        public function getIdProjeto(){
-            return $this->idProjeto;
+        public function getNomeUser(){
+            return $this->nomeUser;
         }
 
-        public function setIdProjeto($idProjeto){
-            $this->idProjeto = $idProjeto;
-        }
-
-        public function getNomeProjeto(){
-            return $this->nomeProjeto;
-        }
-
-        public function setNomeProjeto($nomeProjeto){
-            $this->nomeProjeto = $nomeProjeto;
+        public function setNomeUser($nomeUser){
+            $this->nomeUser = $nomeUser;
         }
 
         public function getPrioridade(){
@@ -71,9 +62,9 @@
             }
         }
 
-        public function setProject($nomeProjeto, $prioridade, $linkProjeto, $imgDesktop, $imgMobile){
+        public function setProject($nomeUser, $prioridade, $linkProjeto, $imgDesktop, $imgMobile){
 
-            $this->setNomeProjeto($nomeProjeto);
+            $this->setNomeUser($nomeUser);
             $this->setPrioridade($prioridade);
             $this->setLinkProjeto($linkProjeto);
             $this->setImgDesktop($imgDesktop);
@@ -82,7 +73,7 @@
             $sql = new Conn();
 
             $result = $sql->insert("INSERT INTO projetos (nomeProjeto, prioridade, imgDesktop, imgMobile, linkProjeto) VALUES (:NOMEPROJETO, :PRIORIDADE, :IMGDESKTOP, :IMGMOBILE, :LINKPROJETO)", [
-                ":NOMEPROJETO" => $this->getNomeProjeto(),
+                ":NOMEPROJETO" => $this->getNomeUser(),
                 ":PRIORIDADE" => $this->getPrioridade(),
                 ":IMGDESKTOP" => $this->getImgDesktop(),
                 ":IMGMOBILE" => $this->getImgMobile(),
@@ -93,23 +84,6 @@
                 header('Location: ../home.php?projeto=success');
             } else {
                 header('Location: ../home.php?projeto=error');
-            }
-        }
-
-        public function delProject($idProject){
-
-            $this->setIdProjeto($idProject);
-
-            $sql = new Conn();
-
-            $result = $sql->delete("DELETE FROM projetos WHERE id = :IDPROJETO", [
-                ":IDPROJETO" => $this->getIdProjeto()
-            ]);
-
-            if($result > 0){
-                header('Location: ../home.php?delete=success');
-            } else {
-                header('Location: ../home.php?delete=error');
             }
         }
     }

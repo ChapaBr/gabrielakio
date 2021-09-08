@@ -61,8 +61,8 @@ Class User extends Conn {
     public function login($emailUser, $senhaUser){
         $sql = new Conn();
 
-        $results = $sql->select("SELECT * FROM usuarios WHERE email = :EMAILUSER AND senha = :PASSWORD", [
-            ":EMAILUSER" => $emailUser,
+        $results = $sql->select("SELECT * FROM usuarios WHERE email = :USERNAME AND senha = :PASSWORD", [
+            ":USERNAME" => $emailUser,
             ":PASSWORD"  => $senhaUser
         ]);
 
@@ -70,37 +70,6 @@ Class User extends Conn {
             return $this->setData($results[0]);
         } else {
             header('Location: ../login.php?login=error');
-            throw new Exception("Login ou senha inválidos.", 1550);
-        }
-    }
-
-    public function register($nomeUser, $emailUser, $senhaUser){
-
-        $this->setNome($nomeUser);
-        $this->setEmail($emailUser);
-        $this->setSenha($senhaUser);
-
-        $sql = new Conn();
-
-        $result = $sql->insert("INSERT INTO usuarios (nome, email, senha) VALUES (:NOMEUSER, :EMAILUSER, :SENHAUSER)", [
-            ":NOMEUSER" => $nomeUser,
-            ":EMAILUSER" => $emailUser,
-            ":SENHAUSER"  => $senhaUser
-        ]);
-
-        if($result > 0){
-            $results = $sql->select("SELECT * FROM usuarios WHERE email = :EMAILUSER AND senha = :PASSWORD", [
-                ":EMAILUSER" => $emailUser,
-                ":PASSWORD"  => $senhaUser
-            ]);
-            if(count($results) > 0){
-                return $this->setData($results[0]);
-            } else {
-                header('Location: ../register.php?validated=error');
-                throw new Exception("Login ou senha inválidos.", 1550);
-            }
-        } else {
-            header('Location: ../register.php?create=error');
             throw new Exception("Login ou senha inválidos.", 1550);
         }
     }

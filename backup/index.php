@@ -94,7 +94,14 @@
             </div>
           <?php 
             }
-          ?>
+            ?>
+          <!-- <div class="carouselBox"> <a href="projetos.html#projeto1"><img src="assets/img/banner-personal-branding.png" class="d-none d-lg-block"><img src="assets/img/banner-personal-branding-mobile.png" class="d-lg-none"></a> </div>
+          <div class="carouselBox"> <a href="projetos.html#projeto2"><img src="https://via.placeholder.com/1920x1080"></a> </div>
+          <div class="carouselBox"> <a href="projetos.html#projeto3"><img src="https://via.placeholder.com/1920x1080"></a> </div>
+          <div class="carouselBox"> <a href="projetos.html#projeto4"><img src="https://via.placeholder.com/1920x1080"></a> </div>
+          <div class="carouselBox"> <a href="projetos.html#projeto5"><img src="https://via.placeholder.com/1920x1080"></a> </div>
+          <div class="carouselBox"> <a href="projetos.html#projeto6"><img src="https://via.placeholder.com/1920x1080"></a> </div>
+          <div class="carouselBox"> <a href="projetos.html#projeto7"><img src="https://via.placeholder.com/1920x1080"></a> </div> -->
         </div>
         <div class="leftContentContainer d-lg-none"><span>Personal Branding</span></div>
         <div class="rightContentContainer d-lg-none"><span>2021</span></div>

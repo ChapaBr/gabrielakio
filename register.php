@@ -58,13 +58,17 @@
                 <div class="row vh-100">
                     <div class="col-12 col-md-4 m-auto">
                         <div class="card">
-                            <form action="Controllers/LoginController.php" method="POST">
+                            <form action="Controllers/RegisterController.php" method="POST">
                                 <div class="form-group">
                                     <div class="card-header text-center">
                                         <a href="index.html" class="d-block w-100 h-100"><img src="assets/img/logo.svg" title="Logo Gabriel Akio" alt="Logo Gabriel Akio"></a>
                                     </div>
                                     <div class="card-body">
-                                        <h2 class="card-title text-center">Login</h2>
+                                        <h2 class="card-title text-center">Criar Conta</h2>
+                                        <div class="form-group mb-3">
+                                            <label for="nomeUser" class="mb-1">Nome</label>
+                                            <input type="text" class="form-control" id="nomeUser" name="nome" aria-describedby="nomeUser" placeholder="Matheus Silva" required>
+                                        </div>
                                         <div class="form-group mb-3">
                                             <label for="emailUser" class="mb-1">Email</label>
                                             <input type="email" class="form-control" id="emailUser" name="email" aria-describedby="emailUser" placeholder="email@examplo.com" required>
@@ -73,10 +77,14 @@
                                             <label for="senhaUser" class="mb-1">Senha</label>
                                             <input type="password" class="form-control" id="senhaUser" name="senha" aria-describedby="senhaUser" placeholder="Senha" required>
                                         </div>
-                                        <?php if($_GET['login'] == "error"){?>
+                                        <div class="form-group mb-3">
+                                            <label for="senhaUser" class="mb-1">Confirme Senha</label>
+                                            <input type="password" class="form-control" id="senhaUserConfirm" name="senhaConfirm" aria-describedby="senhaUserConfirm" placeholder="Confirme Senha" required>
+                                        </div>
+                                        <?php if($_GET['error'] == "senha"){?>
                                             <div class="alert alert-warning alert-dismissible fade show mb-0" role="alert">
-                                                <strong>Falha na Autenticação</strong>
-                                                <p class="m-0">Por favor tente fazer login novamente</p>
+                                                <strong>Senhas Diferentes</strong>
+                                                <p class="m-0">Por favor verifique se as senhas são iguais</p>
                                                 <button type="button" class="btnClone" data-dismiss="alert" aria-label="Close" style="position: absolute;top: 0;right: 7px;border: none;background: transparent;">
                                                     <span aria-hidden="true" style="font-size: 20px">&times;</span>
                                                 </button>
@@ -84,7 +92,7 @@
                                         <?php } ?>
                                     </div>
                                     <div class="card-footer text-center">
-                                        <button type="submit" class="btn btn-success">Fazer Login</button>
+                                        <button type="submit" class="btn btn-success">Criar Conta</button>
                                     </div>
                                 </div>
                             </form>

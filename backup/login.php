@@ -84,7 +84,7 @@
                                         <?php } ?>
                                     </div>
                                     <div class="card-footer text-center">
-                                        <button type="submit" class="btn btn-success">Fazer Login</button>
+                                        <button type="submite" class="btn btn-success">Fazer Login</button>
                                     </div>
                                 </div>
                             </form>
@@ -93,7 +93,9 @@
                 </div>
             </div>
         </section>
-    <script src="assets/js/jquery.min.js"></script>
+
+    <script src="libs/bootstrap/js/bootstrap.min.js"></script>
+    <script src="libs/owlcarousel/owl.carousel.min.js"></script>
     <script>
         $('.btnClone').click(function(){
             $('.alert').fadeOut();
